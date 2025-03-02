@@ -1,0 +1,14 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier-scss", "stylelint-config-clean-order"],
+  "rules": {
+    "property-no-unknown": null,
+    "property-no-vendor-prefix": null,
+    "selector-class-pattern": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["export"]
+      }
+    ]
+  }
+}

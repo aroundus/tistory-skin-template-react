@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+  <information>
+    <name>이름</name>
+    <version>1.0</version>
+    <description>
+      <![CDATA[ 설명 ]]>
+    </description>
+    <license>
+      <![CDATA[ CCL ]]>
+    </license>
+  </information>
+  <author>
+    <name>작성자 이름</name>
+    <homepage>홈페이지 주소</homepage>
+    <email>이메일</email>
+  </author>
+  <default>
+    <!-- 사용 안 함
+    <cover>
+      [
+        {
+          "name": "key-visual",
+          "title": "",
+          "dataType": "RECENT",
+          "data": {
+            "category": "ALL",
+            "size": 10
+          }
+        }
+      ]
+    </cover>
+    -->
+    <entriesOnList>20</entriesOnList>
+    <entriesOnPage>10</entriesOnPage>
+  </default>
+  <!-- 사용 안 함
+  <cover>
+    <item>
+      <name>key-visual</name>
+      <label><![CDATA[ 키 비주얼 ]]></label>
+      <description><![CDATA[ 키 비주얼을 노출합니다. ]]></description>
+    </item>
+  </cover>
+  -->
+</skin>

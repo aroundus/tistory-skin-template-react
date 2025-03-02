@@ -1,0 +1,19 @@
+{
+  "data": {
+    "id": "671de109dc30ab1e9864e8c6",
+    "type": "ENTRY",
+    "categoryId": 605,
+    "meta": {
+      "serviceId": "tistory",
+      "blogId": 6688464,
+      "entryId": 23
+    },
+    "reactionCounter": {
+      "sum": 0,
+      "like": 0,
+      "sad": 0
+    },
+    "createdDate": "2024-10-27T15:43:21.164",
+    "updatedDate": "2024-10-27T20:53:20.154"
+  }
+}
