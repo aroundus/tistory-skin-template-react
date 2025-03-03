@@ -5,22 +5,22 @@ import { PublicImage } from '@/shared/ui';
 
 const codes = [
   `
-import { getSession } from '@/entities/user/api';
+import * as userService from '@/entities/user/api';
 
 // 사용자 세션 조회
-const session = getSession();
+const session = userService.getSession();
   `,
   `
-import { getBlog } from '@/entities/blog/api';
+import * as blogService from '@/entities/blog/api';
 
 // 블로그 정보 조회
-const blog = getBlog();
+const blog = blogService.getBlog();
   `,
   `
-import { getMenu } from '@/entities/menu/api';
+import * as menuService from '@/entities/menu/api';
 
 // 메뉴 조회
-const menu = getMenu();
+const menu = menuService.getMenu();
   `,
   `
 import * as categoryService from '@/entities/category/api';

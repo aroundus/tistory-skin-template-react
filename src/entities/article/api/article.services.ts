@@ -1,4 +1,4 @@
-import { getBlog } from '@/entities/blog/api';
+import * as blogService from '@/entities/blog/api';
 import { dayjs, truncateWithPeriod } from '@/shared/lib';
 
 /**
@@ -89,7 +89,7 @@ const INITIAL_COVER_ARTICLE: CoverArticle = {
 };
 
 export function getCoverArticles(name: string) {
-  const blog = getBlog();
+  const blog = blogService.getBlog();
   const elements = document.querySelectorAll(`[data-cover="${name}"] .cover-item`);
 
   return Array.from(elements).map((element) => {
@@ -134,7 +134,7 @@ const INITIAL_ARTICLE: Article = {
 };
 
 export function getArticles() {
-  const blog = getBlog();
+  const blog = blogService.getBlog();
   const elements = document.getElementById('tistory')!.querySelectorAll('#article .article');
 
   return Array.from(elements).map((element) => {
