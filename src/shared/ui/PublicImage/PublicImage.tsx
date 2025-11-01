@@ -37,11 +37,11 @@ export function PublicImage(props: React.ImgHTMLAttributes<HTMLImageElement>) {
       const scriptTag = document.querySelector('script[src*="/skin/images/script.js"]');
 
       if (scriptTag) {
-        const scriptURL = scriptTag.getAttribute('src');
+        const scriptUrl = scriptTag.getAttribute('src');
 
-        if (scriptURL) {
-          const baseURL = scriptURL.replace(/\/script\.js(\?.*)?$/, '');
-          setSrc(baseURL + props.src.replace(/^\/images/, ''));
+        if (scriptUrl) {
+          const baseUrl = scriptUrl.replace(/\/script\.js(\?.*)?$/, '');
+          setSrc(baseUrl + props.src.replace(/^\/images/, ''));
         }
       }
     }

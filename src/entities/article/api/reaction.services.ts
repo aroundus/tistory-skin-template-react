@@ -53,13 +53,13 @@ interface DeleteLikeReactionResponse {
   updatedDate: string;
 }
 
-export async function getReaction(articleNo: number): Promise<TistoryResponse<GetReactionResponse>> {
+export async function getReaction(articleId: number): Promise<TistoryResponse<GetReactionResponse>> {
   if (process.env.NODE_ENV === 'development') {
     return reactionGetMockData;
   }
 
   try {
-    const response = await fetch(`/reaction?entryId=${articleNo}`);
+    const response = await fetch(`/reaction?entryId=${articleId}`);
 
     if (response.ok) {
       return await response.json();
@@ -72,7 +72,7 @@ export async function getReaction(articleNo: number): Promise<TistoryResponse<Ge
   }
 }
 
-export async function postLikeReaction(articleNo: number): Promise<TistoryResponse<PostLikeReactionResponse>> {
+export async function postLikeReaction(articleId: number): Promise<TistoryResponse<PostLikeReactionResponse>> {
   if (process.env.NODE_ENV === 'development') {
     return likeReactionPostMockData;
   }
@@ -84,7 +84,7 @@ export async function postLikeReaction(articleNo: number): Promise<TistoryRespon
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        entryId: articleNo,
+        entryId: articleId,
         reactionType: 'LIKE',
       }),
     });
@@ -100,7 +100,7 @@ export async function postLikeReaction(articleNo: number): Promise<TistoryRespon
   }
 }
 
-export async function deleteLikeReaction(articleNo: number): Promise<TistoryResponse<DeleteLikeReactionResponse>> {
+export async function deleteLikeReaction(articleId: number): Promise<TistoryResponse<DeleteLikeReactionResponse>> {
   if (process.env.NODE_ENV === 'development') {
     return likeReactionDeleteMockData;
   }
@@ -112,7 +112,7 @@ export async function deleteLikeReaction(articleNo: number): Promise<TistoryResp
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        entryId: articleNo,
+        entryId: articleId,
       }),
     });
 

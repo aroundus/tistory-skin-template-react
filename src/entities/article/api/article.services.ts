@@ -9,9 +9,9 @@ import { dayjs, truncateWithPeriod } from '@/shared/lib';
  */
 export interface CoverArticle {
   /**
-   * 글 번호
+   * 글 아이디
    */
-  articleNo: number;
+  articleId: number;
 
   /**
    * 카테고리 이름
@@ -65,7 +65,7 @@ export interface CoverArticle {
   /**
    * 썸네일 주소
    */
-  thumbnailURL: string;
+  thumbnailUrl: string;
 
   /**
    * 글 제목
@@ -74,7 +74,7 @@ export interface CoverArticle {
 }
 
 const INITIAL_COVER_ARTICLE: CoverArticle = {
-  articleNo: 0,
+  articleId: 0,
   category: '',
   categoryPath: '',
   commentCount: 0,
@@ -84,7 +84,7 @@ const INITIAL_COVER_ARTICLE: CoverArticle = {
   likeCount: null,
   path: '',
   summary: '',
-  thumbnailURL: '',
+  thumbnailUrl: '',
   title: '',
 };
 
@@ -98,7 +98,7 @@ export function getCoverArticles(name: string) {
 
       return {
         ...coverArticle,
-        articleNo: Number(coverArticle.path.replace(/[\D]/g, '')),
+        articleId: Number(coverArticle.path.replace(/[\D]/g, '')),
         category: coverArticle.category === '카테고리 없음' ? blog.title : `#${coverArticle.category}`,
         isLikeActive: false,
         likeCount: null,
@@ -169,7 +169,7 @@ export function getArticles() {
 
       return {
         ...article,
-        articleNo: Number(article.path.replace(/[\D]/g, '')),
+        articleId: Number(article.path.replace(/[\D]/g, '')),
         category: article.category === '카테고리 없음' ? blog.title : `#${article.category}`,
         commentCount,
         content,

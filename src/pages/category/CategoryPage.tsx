@@ -24,7 +24,7 @@ async function fetchArticlesLikeCount() {
 
   for (let index = 0; index < articles.length; index += 1) {
     const article = articles[index];
-    const fetchedReaction = await articleService.getReaction(article.articleNo);
+    const fetchedReaction = await articleService.getReaction(article.articleId);
 
     articlesWithLikeCount.push({
       ...article,

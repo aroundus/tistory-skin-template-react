@@ -17,14 +17,14 @@ export interface Blog {
   /**
    * 블로그 대표 이미지 주소
    */
-  imageURL: string;
+  imageUrl: string;
 }
 
 const INITIAL_BLOG: Blog = {
   title: '',
   description: '',
   blogger: '',
-  imageURL: '',
+  imageUrl: '',
 };
 
 export function getBlog() {

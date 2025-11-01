@@ -2,8 +2,8 @@ interface User {
   id: number;
   name: string;
   email: string;
-  imageURL: string;
-  blogURL: string;
+  imageUrl: string;
+  blogUrl: string;
   isAdmin: boolean;
 }
 
@@ -35,8 +35,8 @@ export function getSession() {
         id: config.USER.id,
         name: config.USER.name,
         email: user.loginId,
-        imageURL: config.USER.profileImage,
-        blogURL: config.USER.homepage,
+        imageUrl: config.USER.profileImage,
+        blogUrl: config.USER.homepage,
         isAdmin: config.ROLE === 'owner',
       };
     }

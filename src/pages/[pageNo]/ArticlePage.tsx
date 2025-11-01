@@ -11,7 +11,7 @@ const [article, setArticle] = useState<Article>(preloadedArticle);
 
 // 글 좋아요 수 조회 (API)
 const fetchArticleLikeCount = useCallback(async () => {
-  const fetchedReaction = await articleService.getReaction(article.articleNo);
+  const fetchedReaction = await articleService.getReaction(article.articleId);
 
   const articleWithLikeCount = {
     ...article,
@@ -29,9 +29,9 @@ useEffect(() => {
 // 글 좋아요 클릭 시 실행하는 함수 (API)
 const handleLikeClick = useCallback(async () => {
   if (article.isLikeActive) {
-    await articleService.deleteLikeReaction(article.articleNo);
+    await articleService.deleteLikeReaction(article.articleId);
   } else {
-    await articleService.postLikeReaction(article.articleNo);
+    await articleService.postLikeReaction(article.articleId);
   }
 
   setArticle((prevArticle) => {

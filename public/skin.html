@@ -1,31 +1,43 @@
 <!doctype html>
 <html lang="ko">
-
   <head>
     <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    />
     <title>[##_page_title_##]</title>
-    <link as="style" crossorigin
+    <link
+      as="style"
+      crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet">
-    <link href="./style.css" rel="stylesheet" type="text/css" />
+      rel="stylesheet"
+    />
+    <link
+      href="./style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
 
   <body id="[##_body_id_##]">
     <s_t3>
       <div id="root"></div>
 
-      <div id="tistory" style="display: none">
-
+      <div
+        id="tistory"
+        style="display: none"
+      >
         <pre id="blog">
           {
             "title": "[##_title_##]",
             "description": "[##_desc_##]",
             "blogger": "[##_blogger_##]",
-            "imageURL": "[##_image_##]"
+            "imageUrl": "[##_image_##]"
           }
         </pre>
 
@@ -47,7 +59,7 @@
                         "title": "[##_cover_item_title_##]",
                         "summary": "[##_cover_item_summary_##]",
                         "path": "[##_cover_item_url_##]",
-                        <s_cover_item_thumbnail>"thumbnailURL": "[##_cover_item_thumbnail_##]",</s_cover_item_thumbnail>
+                        <s_cover_item_thumbnail>"thumbnailUrl": "[##_cover_item_thumbnail_##]",</s_cover_item_thumbnail>
                         "category": "[##_cover_item_category_##]",
                         "categoryPath": "[##_cover_item_category_url_##]",
                         "commentCount": [##_cover_item_comment_count_##],
@@ -72,7 +84,7 @@
                   "summary": "[##_article_rep_summary_##]",
                   "path": "[##_article_rep_link_##]",
                   "author": "[##_article_rep_author_##]",
-                  <s_article_rep_thumbnail>"thumbnailURL": "[##_article_rep_thumbnail_raw_url_##]",</s_article_rep_thumbnail>
+                  <s_article_rep_thumbnail>"thumbnailUrl": "[##_article_rep_thumbnail_raw_url_##]",</s_article_rep_thumbnail>
                   "category": "[##_article_rep_category_##]",
                   "categoryPath": "[##_article_rep_category_link_##]",
                   "date": "[##_article_rep_simple_date_##]",
@@ -94,7 +106,7 @@
                   "summary": "[##_article_rep_summary_##]",
                   "path": "[##_article_rep_link_##]",
                   "author": "[##_article_rep_author_##]",
-                  <s_article_rep_thumbnail>"thumbnailURL": "[##_article_rep_thumbnail_raw_url_##]",</s_article_rep_thumbnail>
+                  <s_article_rep_thumbnail>"thumbnailUrl": "[##_article_rep_thumbnail_raw_url_##]",</s_article_rep_thumbnail>
                   "category": "[##_article_rep_category_##]",
                   "categoryPath": "[##_article_rep_category_link_##]",
                   "date": "[##_article_rep_simple_date_##]",
@@ -114,23 +126,34 @@
 
         <div id="pagination">
           <s_paging>
-            <a id="prev-page" [##_prev_page_##] class="[##_no_more_prev_##]">
+            <a
+              id="prev-page"
+              [##_prev_page_##]
+              class="[##_no_more_prev_##]"
+            >
               이전 페이지
             </a>
             <s_paging_rep>
-              <a [##_paging_rep_link_##]
-                class="page">[##_paging_rep_link_num_##]
+              <a
+                [##_paging_rep_link_##]
+                class="page"
+                >[##_paging_rep_link_num_##]
               </a>
             </s_paging_rep>
-            <a id="next-page" [##_next_page_##] class="[##_no_more_next_##]">
+            <a
+              id="next-page"
+              [##_next_page_##]
+              class="[##_no_more_next_##]"
+            >
               다음 페이지
             </a>
           </s_paging>
         </div>
-
       </div>
     </s_t3>
-    <script type="text/javascript" src="./images/script.js"></script>
+    <script
+      type="text/javascript"
+      src="./images/script.js"
+    ></script>
   </body>
-
 </html>
