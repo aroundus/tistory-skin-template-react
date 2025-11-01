@@ -1,2 +1,2 @@
-export { getCategories } from './category.services';
-export type { Category } from './category.services';
+export * as categoryService from './category.services';
+export type * as CategoryService from './category.services';

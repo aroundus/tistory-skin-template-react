@@ -6,7 +6,7 @@ const codes = [
 const keyword = decodeURIComponent(location.pathname.split('/')[2]);
   `,
   `
-import * as articleService from '@/entities/article/api';
+import { articleService, reactionService } from '@/entities/article/api';
 
 // 글 목록 조회
 const preloadedArticles = articleService.getArticles();
@@ -22,7 +22,7 @@ async function fetchArticlesLikeCount() {
 
   for (let index = 0; index < articles.length; index += 1) {
     const article = articles[index];
-    const fetchedReaction = await articleService.getReaction(article.articleId);
+    const fetchedReaction = await reactionService.getReaction(article.articleId);
 
     articlesWithLikeCount.push({
       ...article,

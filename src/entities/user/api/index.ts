@@ -1,1 +1,1 @@
-export { getSession } from './session.services';
+export * as userService from './user.services';

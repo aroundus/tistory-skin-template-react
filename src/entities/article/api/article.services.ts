@@ -1,4 +1,4 @@
-import * as blogService from '@/entities/blog/api';
+import { blogService } from '@/entities/blog/api';
 import { dayjs, truncateWithPeriod } from '@/shared/lib';
 
 /**

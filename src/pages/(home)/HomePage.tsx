@@ -5,31 +5,31 @@ import { PublicImage } from '@/shared/ui';
 
 const codes = [
   `
-import * as userService from '@/entities/user/api';
+import { userService } from '@/entities/user/api';
 
 // 사용자 세션 조회
 const session = userService.getSession();
   `,
   `
-import * as blogService from '@/entities/blog/api';
+import { blogService } from '@/entities/blog/api';
 
 // 블로그 정보 조회
 const blog = blogService.getBlog();
   `,
   `
-import * as menuService from '@/entities/menu/api';
+import { menuService } from '@/entities/menu/api';
 
 // 메뉴 조회
 const menu = menuService.getMenu();
   `,
   `
-import * as categoryService from '@/entities/category/api';
+import { categoryService } from '@/entities/category/api';
 
 // 카테고리 목록 조회
 const categories = categoryService.getCategories();
   `,
   `
-import * as articleService from '@/entities/article/api';
+import { articleService, reactionService } from '@/entities/article/api';
 
 // 글 목록 조회
 const preloadedArticles = articleService.getArticles();
@@ -45,7 +45,7 @@ async function fetchArticlesLikeCount() {
 
   for (let index = 0; index < articles.length; index += 1) {
     const article = articles[index];
-    const fetchedReaction = await articleService.getReaction(article.articleId);
+    const fetchedReaction = await reactionService.getReaction(article.articleId);
 
     articlesWithLikeCount.push({
       ...article,

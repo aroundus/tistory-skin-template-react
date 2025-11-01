@@ -2,7 +2,7 @@ import { useLayoutEffect } from 'react';
 
 const codes = [
   `
-import * as articleService from '@/entities/article/api';
+import { articleService, reactionService } from '@/entities/article/api';
 
 // 글 조회
 const preloadedArticle = articleService.getArticles()[0];
@@ -11,7 +11,7 @@ const [article, setArticle] = useState<Article>(preloadedArticle);
 
 // 글 좋아요 수 조회 (API)
 const fetchArticleLikeCount = useCallback(async () => {
-  const fetchedReaction = await articleService.getReaction(article.articleId);
+  const fetchedReaction = await reactionService.getReaction(article.articleId);
 
   const articleWithLikeCount = {
     ...article,
@@ -29,9 +29,9 @@ useEffect(() => {
 // 글 좋아요 클릭 시 실행하는 함수 (API)
 const handleLikeClick = useCallback(async () => {
   if (article.isLikeActive) {
-    await articleService.deleteLikeReaction(article.articleId);
+    await reactionService.deleteLikeReaction(article.articleId);
   } else {
-    await articleService.postLikeReaction(article.articleId);
+    await reactionService.postLikeReaction(article.articleId);
   }
 
   setArticle((prevArticle) => {

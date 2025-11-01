@@ -1,1 +1,1 @@
-export { getBlog } from './blog.services';
+export * as blogService from './blog.services';

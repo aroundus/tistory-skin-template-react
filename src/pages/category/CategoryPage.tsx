@@ -2,13 +2,13 @@ import { useLayoutEffect } from 'react';
 
 const codes = [
   `
-import * as categoryService from '@/entities/category/api';
+import { categoryService } from '@/entities/category/api';
 
 // 카테고리 목록 조회
 const categories = categoryService.getCategories();
   `,
   `
-import * as articleService from '@/entities/article/api';
+import { articleService, reactionService } from '@/entities/article/api';
 
 // 글 목록 조회
 const preloadedArticles = articleService.getArticles();
@@ -24,7 +24,7 @@ async function fetchArticlesLikeCount() {
 
   for (let index = 0; index < articles.length; index += 1) {
     const article = articles[index];
-    const fetchedReaction = await articleService.getReaction(article.articleId);
+    const fetchedReaction = await reactionService.getReaction(article.articleId);
 
     articlesWithLikeCount.push({
       ...article,

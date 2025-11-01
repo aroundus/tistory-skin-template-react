@@ -78,7 +78,7 @@ export async function postLikeReaction(articleId: number): Promise<TistoryRespon
   }
 
   try {
-    const response = await fetch(`/reaction`, {
+    const response = await fetch('/reaction', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ export async function deleteLikeReaction(articleId: number): Promise<TistoryResp
   }
 
   try {
-    const response = await fetch(`/reaction`, {
+    const response = await fetch('/reaction', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
